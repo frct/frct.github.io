@@ -36,33 +36,33 @@ author:
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=pQf6CE0AAAAJ&hl=en"
-  inspire-hep      : # URL
-  impactstory      : # URL
+  inspire-hep      :
+  impactstory      :
   orcid            : "https://orcid.org/0000-0003-2921-0901"
-  semantic         : # URL
+  semantic         :
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=francois+cinotti"
   researchgate     : "https://www.researchgate.net/profile/Francois-Cinotti"
-  scopus           : # URL
+  scopus           :
 
   # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
-  github           : # "frct"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  github           : "frct"
+  kaggle           :
+  stackoverflow    :
 
   # Social media
-  artstation       : # Username
-  bluesky          : # Replace this with your Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : # Username
-  lastfm           : # Username
+  artstation       :
+  bluesky          : 
+  facebook         :
+  flickr           :
+  foursquare       :
+  goodreads        :
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
   linkedin         : "francoiscinotti"
   mastodon         : # URL
   medium           : # URL
