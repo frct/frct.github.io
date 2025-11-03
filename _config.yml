@@ -23,10 +23,10 @@ repository               : "frct/frct.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Profile photo.jpg"
+  avatar           : "Profile_photo.jpg"
   name             : "François Cinotti"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : # "Short biography for the left-hand sidebar"
   location         : "Berkshire, UK"
   employer         : # "Red Brick University"
   uri              : # URL
@@ -35,12 +35,12 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=pQf6CE0AAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0003-2921-0901"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=francois+cinotti"
   researchgate     : "https://www.researchgate.net/profile/Francois-Cinotti"
   scopus           : # URL
 
@@ -48,7 +48,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "https://github.com/frct"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
