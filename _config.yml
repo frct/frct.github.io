@@ -23,7 +23,7 @@ repository               : "frct/frct.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "bio-photo.jpg"
+  avatar           : "Profile photo.jpg"
   name             : "François Cinotti"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
