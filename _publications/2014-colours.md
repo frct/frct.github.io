@@ -1,0 +1,13 @@
+---
+title: "How color language is shaped by the variability of reflected light under changes of illumination"
+collection: publications
+category: conferences
+permalink: /publication/2014-colours
+excerpt: 'This paper explains the origins of singular colours.'
+date: 2014
+venue: 'AISB2014'
+paperurl: 'https://www.researchgate.net/profile/Christoph-Witzel/publication/287320988_How_color_language_is_shaped_by_the_variability_of_reflected_light_under_changes_of_illumination/links/568c200808ae197e42689ba5/How-color-language-is-shaped-by-the-variability-of-reflected-light-under-changes-of-illumination.pdf'
+citation: 
+---
+
+The relationship between the sensory signal of the photoreceptors and the language of color is completely unclear. A recent finding established a surprisingly accurate correlation between color terms and so-called singularities in the laws governing how sensory signals for different surfaces change across illuminations. The sensory signal depends on the reflectances of the surfaces, the illuminants, and the sensitivity profiles of the human photoreceptors. This paper examines the role played by reflectances, illuminants and cone sensitivities in determining the relationship between color terms and the singularities in laws of the sensory change. We found that this relationship holds for a wide range of illuminants, as long as these are predominantly broadband. The relationship also exists when using sensors that differ in important aspects from human photoreceptors, as long as these sensors cover the whole visual spectrum. According to our results, the characteristics of the reflectance spectra are the key factor that determines the relationship between the color terms and the sensory singularities.
