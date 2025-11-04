@@ -1,0 +1,13 @@
+---
+title: "Dopamine enables dynamic regulations of exploration"
+collection: publications
+category: conferences
+permalink: /publication/2017-dopamine
+excerpt: 
+date: 2017
+venue: 'Third Multidisciplinary Conference on Reinforcement Learning and Decision Making'
+paperurl: 
+citation: 
+---
+
+We present rat behavioural data in a non-stationary three-armed bandit task where observed long-term improvements in performance and decline in exploration levels suggest that rats are capable of some sort of meta-learning, ie the regulation of learning and decision-making parameters underlying behaviour. This initial observation is followed by a proposal for a reinforcement learning model with an added meta-learning mechanism regulating the inverse temperature β of the action selection function. More specifically, this mechanism is designed in such a way that accumulation of positive “reward prediction errors”(RPE) leads to increased exploitation of what is perceived as the best action, whereas a drop in the rate of RPEs entails increased adaptive exploration of potentially better options. This model is capable of reproducing a range of experimental results, which a series of rival models cannot, and allows predictions which could then be verified. In a second part of the experiment, inhibition of dopamine through a systemic injection of D1/D2 receptor antagonist flupenthixol is shown to increase exploration levels without affecting performance and learning quite as strongly, thus supporting the hypothesis that, in addition to the well established role of phasic dopamine in signalling individual RPEs necessary for the updating of action values, dopamine also controls the balance between exploration and exploitation as reported by Humphries et al.(2012). This possibility is mirrored in our model by the average RPE signal used to regulate β, which may be construed as a long-term or tonic component of dopaminergic activity.
