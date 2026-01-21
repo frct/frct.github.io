@@ -1,7 +1,7 @@
 ---
 title: 'Paper spotlight: Dopamine blockade impairs the exploration-exploitation trade-off in Rats'
 date: 2026-11-10
-permalink: /posts/2025-11-06-my-dopamine-paper-1
+permalink: /posts/2026-11-06-my-dopamine-paper-1
 tags:
   - Paper spotlights
   - Dopamine
