@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-GB"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "François's Eclectica"
+title                    : "François' Eclectica"
 title_separator          : "-"
 name                     : &name "François Cinotti"
 description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
