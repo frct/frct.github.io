@@ -9,8 +9,6 @@ redirect_from:
 
 <div style="display: flex; gap: 2em;">
   <div style="flex: 1;">
-    **English**
-
 <p>Hello! I'm François, an Anglo-French (or Franco-English, pick your poison) researcher in computational neuroscience and biological systems modelling, with a particular interest in the mechanisms of learning and decision-making. My work focuses on meta-learning, that is, how organisms regulate their learning parameters in order to adapt their learning rate and exploration-exploitation trade-off to their environment.
 
 <p>I am currently working at the Institute of Intelligent Systems and Robotics (ISIR, Paris Sorbonne University) on modelling an experiment conducted by a team of neuroscientists in Bordeaux, aimed at understanding how initial learning conditions continue to affect future learning abilities.
@@ -20,7 +18,7 @@ redirect_from:
 <p>The purpose of this website is to talk about my research, explain how to use some of the tools I've learnt, and discuss ideas that have inspired me.
   </div>
   <div style="flex: 1;">
-<p></p>Bienvenu sur ma page perso ! Je m’appelle François, je suis un chercheur franco‑anglais (ou anglo‑français, au choix) en neurosciences computationnelles et en modélisation des systèmes biologiques, surtout spécialisé sur les questions d’apprentissage et de prise de décision. Mon travail porte principalement sur le méta‑apprentissage, c’est‑à‑dire la manière dont les organismes régulent leur comportement en adaptant leur vitesse d'apprentissage et leur équilibre exploration)exploitation à leur environnement.
+<p></p>Bienvenue sur ma page perso ! Je m’appelle François, je suis un chercheur franco‑anglais (ou anglo‑français, au choix) en neurosciences computationnelles et en modélisation des systèmes biologiques, surtout spécialisé sur les questions d’apprentissage et de prise de décision. Mon travail porte principalement sur le méta‑apprentissage, c’est‑à‑dire la manière dont les organismes régulent leur comportement en adaptant leur vitesse d'apprentissage et leur équilibre exploration)exploitation à leur environnement.
 
 <p>Je travaille actuellement à l’Institut des Systèmes Intelligents et de Robotique (ISIR, Sorbonne Université) sur la modélisation d’une expérience menée par une équipe de neuroscientifiques à Bordeaux, visant à comprendre comment les conditions initiales d’apprentissage continuent d’influencer les capacités d’apprentissage futures.
 
