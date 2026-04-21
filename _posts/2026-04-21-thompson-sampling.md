@@ -12,6 +12,5 @@ tags:
 This post introduces Thompson Sampling through a hands-on Python notebook.
 
 [📓 View the notebook (rendered)](https://nbviewer.org/github/frct/frct.github.io/blob/master/files/thompson_sampling.ipynb)
-
 [⬇️ Download the notebook](https://raw.githubusercontent.com/frct/frct.github.io/refs/heads/master/files/thompson_sampling.ipynb)
 ----
