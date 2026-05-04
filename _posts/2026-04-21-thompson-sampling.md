@@ -9,7 +9,7 @@ tags:
 
 (Version française plus bas)
 
-This post introduces Thompson Sampling through a hands-on Python notebook.
+This post introduces Thompson Sampling and two non-stationary variants through a hands-on Python notebook.
 
 [📓 View the notebook (rendered)]()
 <a href="/files/ThompsonSampling.ipynb" download>⬇️ Download the notebook</a>
