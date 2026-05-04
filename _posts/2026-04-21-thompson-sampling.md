@@ -12,5 +12,5 @@ tags:
 This post introduces Thompson Sampling through a hands-on Python notebook.
 
 [📓 View the notebook (rendered)]()
-<a href="/files/Thompson_sampling.ipynb" download>⬇️ Download the notebook</a>
+<a href="/files/ThompsonSampling.ipynb" download>⬇️ Download the notebook</a>
 ----
