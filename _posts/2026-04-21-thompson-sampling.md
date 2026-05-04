@@ -14,3 +14,8 @@ This post introduces Thompson Sampling through a hands-on Python notebook.
 [📓 View the notebook (rendered)]()
 <a href="/files/ThompsonSampling.ipynb" download>⬇️ Download the notebook</a>
 ----
+
+Ce tutoriel explique le fonctionnement du Thompson sampling et de deux variantes conçues pour les environnements non-stationnaires.
+
+[📓 Visualiser le notebook (mode non-interactif)]()
+<a href="/files/ThompsonSampling_fr.ipynb" download>⬇️ Télécharger le notebook</a>
