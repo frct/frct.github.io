@@ -4,5 +4,5 @@ excerpt: "This is an animated simulation of platelet aggregation in thrombosis."
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+This is an animated simulation of platelet aggregation in thrombosis, work that was carried out during my postdoc at the University of Reading that is awaiting publication. Fluid dynamics are simulated using a Lattice Boltzmann Method modified to allow flow through a porous structure (the growing clot). Black particle traces allow the visualisation of blood flow but are slowed down 1000 times.
 ![Thrombus growth animation](https://github.com/frct/frct.github.io/blob/master/images/Thrombus_growth.gif)
