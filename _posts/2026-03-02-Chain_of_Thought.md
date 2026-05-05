@@ -1,7 +1,7 @@
 ---
 title: 'PAPER REVIEW: “Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens”'
 date: 2026-03-02
-permalink: /posts/2026-03-02-blog-post
+permalink: /posts/2026-03-02-Chain_of_Thought
 tags:
   - AI
 ---
