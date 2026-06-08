@@ -1,6 +1,6 @@
 ---
 title: 'PAPER SPOTLIGHT: Dopaminergic mechanisms of dynamical social specialization'
-date: 2026-06-05
+date: 2026-06-10
 permalink: /posts/2026-06-04-Social_Specialization_Mechanisms.md
 tags:
   - Dopamine
