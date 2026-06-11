@@ -1,12 +1,12 @@
 ---
 title : 'BOOK SUMMARY: Green Philosophy by Roger Scruton'
-date : 2026-06-07
+date : 2026-06-16
 permalink : /posts/2026-05-07-Green_Philosophy
 tags :
   - Philosophy
 ---
 
-[English version below]
+(English version below)
 
 # Green philosophy: How to think seriously about the planet
 (Philosophie verte: comment réfléchir sérieusement à la planète)
