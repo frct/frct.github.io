@@ -60,4 +60,4 @@ En conclusion, cet article met en lumière une limite indépassable du *CoT prom
 
 ---
 # Référence
-- Zhao, C., Tan, Z., Ma, P., Li, D., Jiang, B., Wang, Y., ... & Liu, H. (2025). Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens. arXiv preprint arXiv:2508.01191
+- Zhao, C., Tan, Z., Ma, P., Li, D., Jiang, B., Wang, Y., Yang, Y. and Liu, H., 2025. Is chain-of-thought reasoning of llms a mirage? a data distribution lens. *arXiv preprint arXiv:2508.01191.*
