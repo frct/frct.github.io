@@ -104,5 +104,5 @@ In summary, this paper establishes an unexpected link between dopaminergic contr
 
 # References
 - Cinotti, F., Fresno, V., Aklil, N. et al. Dopamine blockade impairs the exploration-exploitation trade-off in rats. *Sci Rep* 9, 6770 (2019). https://doi.org/10.1038/s41598-019-43245-z
-- Schultz et al., A Neural Substrate of Prediction and Reward. *Science*275,1593-1599(1997).DOI:10.1126/science.275.5306.1593
+- Schultz et al., A Neural Substrate of Prediction and Reward. *Science* 275,1593-1599(1997).DOI:10.1126/science.275.5306.1593
 - Solié, C., Nicolson, A., Justo, R. et al. Dopaminergic mechanisms of dynamical social specialization. *Nature* 654, 163–172 (2026). https://doi.org/10.1038/s41586-026-10301-4
