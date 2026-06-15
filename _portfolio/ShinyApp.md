@@ -1,5 +1,6 @@
 ---
 title: "Shiny app"
+date: 15/06/2026
 excerpt: "Screenshots of an interactive app for the analysis of biological data."
 collection: portfolio
 ---
