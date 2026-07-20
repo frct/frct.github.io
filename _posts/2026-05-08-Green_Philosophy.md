@@ -1,6 +1,6 @@
 ---
 title : 'BOOK SUMMARY: Green Philosophy by Roger Scruton'
-date : 2026-06-16
+date : 2026-08-16
 permalink : /posts/2026-05-08-Green_Philosophy
 tags :
   - Philosophy
