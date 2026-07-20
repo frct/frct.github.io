@@ -1,4 +1,6 @@
-Paper authored by Jeff Clune and Stanley authors of "Why Greatness isn't Planned"
+(Version française plus bas)
+
+Preprint authored by Jeff Clune and Stanley authors of "Why Greatness isn't Planned" which I discoverd by listening to the excellent interview on MLST. 
 
 As more data is fed into current AI models, their performance improves leading to what the authors call *representational optimism*, the belief that as data increases, the underlying representations that are contained in the neural network become better. In this case, "better" means these representations are modular, non-overlapping and meaningful. For example, the ability to add should be an independent feature that does not depend on what is being added. Counter this optimism, an increasing number of studies suggest that the performance of modern models does not rely on such representations but rather on heuristics which are redundant and correspond to fractured concepts. These representations are called here *Fractured Entangled Representations* (FER) and are opposed to idealised *Unified Factored Representations* (UFR). 
 To illustrate the difference between FER and UFR, the authors use an image rendering Neural Network called PicBreeder which takes as input the x and y coordinates of each pixel and its distance from the centre of the image, to return a colour vector (h,s,v). To properly appreciate the analogy the authors are making, it is important to understand that this neural network generates a single image once its parameters are fixed.
