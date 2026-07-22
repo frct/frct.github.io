@@ -1,3 +1,13 @@
+---
+title: 'PAPER REVIEW: Questioning Representational Optimism in Deep Learning: The Fractured Entangled Representation Hypothesis'
+date: 2026-07-17
+permalink: /posts/2026-07-17_Fractured-Entangled-Representation
+tags:
+  - Paper reviews
+  - Artificial Intelligence
+  - Evolution
+---
+
 (Version française plus bas)
 
 # Introduction: What are Fractured Entangled Representations?
@@ -24,3 +34,5 @@ But does all this really matter? As long as the model performs as desired, why s
 - *generalisation*, that is the ability to make good predictions in areas where training data is sparse. Good representations, which are modular and factored, can be used as a scaffold for filling in these gaps. Without such representations, interpolation cannot use the fundamental and helpful regularities these representations would have captured. This is especially relevant at the frontiers of human knowledge where the expectations for what LLMs might contribute are probably the highest, but where training data is necessarily rarer.
 - *creativity*. Paradoxically, creativity or the ability to generate novel artefacts requires good representations, in particular of the generic class the new artefact is meant to belong to. Creativity does not function *ex nihilo* but builds upon past ideas which must be properly captured. Even when crossing boundaries, for instance creating a new musical genre, artists must first master the rules of the previous style to understand where, how, and to what extent they can afford to go. Without good representations, creativity is synonymous with random chaos.
 - *learning*. This ties in with what causes the difference in the two CPPNs. For a neural network, learning means adjusting the connection weights between neurons to achieve a certain ability such as recognising cat images. The way humans learn, and in a sense the way the Picbreeder images evolve, is fundamentally sequential: as babies, we learn to babble, then to say a few simple words, before chaining words into sentences and finally holding conversations or delivering lectures. Similarly at school, we learn the basics of a subject before moving on to more advanced topics, e.g. counting comes before addition which comes before algebra, etc. This sequentiality means we absorb new information by building on top of previously acquired knowledge, we leverage prior representations to make new ones. This is not the case for LLMs which learn the whole internet at once, so to speak, in the same way that the skull image obtained by SGD emerged from scratch instead of through a meandering exploration. This has consequences when you want an already-trained model to learn new abilities: rather than parsimoniously exploit past representations and tweaking just a handful of connection weights, the whole of the neural net has to be revised. For instance, recall how the parameter sweeps found a single connection weight that made the skull image wink; in this case, thanks to the efficiency of UFRs, to produce a winking skull requires adjusting that single parameter; on the other hand the FERs of the SGD-derived skull image mean a much larger number of, if not all, connection weights now have to be re-learnt.
+
+----
