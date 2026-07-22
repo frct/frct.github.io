@@ -3,7 +3,6 @@ title: 'MY RESEARCH: Dopamine blockade impairs the exploration-exploitation trad
 date: 2026-03-13
 permalink: /posts/2026-03-13-my-dopamine-paper
 tags:
-  - Paper spotlights
   - Dopamine
   - Reinforcement Learning
 ---
