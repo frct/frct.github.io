@@ -63,6 +63,6 @@ Mais tout cela a-t-il vraiment de l'importance ? Tant que le modèle fonctionne 
 
 --- 
 
-# References
+# Référence
 
 Kumar, A., Clune, J., Lehman, J. and Stanley, K.O., 2025. Questioning representational optimism in deep learning: The fractured entangled representation hypothesis. arXiv preprint arXiv:2505.11581.
