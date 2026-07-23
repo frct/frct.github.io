@@ -8,10 +8,6 @@ tags :
 
 (English version below)
 
-# Green philosophy: How to think seriously about the planet
-(Philosophie verte: comment réfléchir sérieusement à la planète)
-Roger Scruton
-
 ## Citation clef
 « Le conservatisme, tel que je l’entends, signifie la préservation de l’écologie sociale. Il est vrai que la liberté individuelle fait partie de cette écologie, puisque sans elle les organismes sociaux ne peuvent pas s’adapter. Mais la liberté n’est pas le seul but de la politique. Le conservatisme et l’écologie sont deux aspects d’une même politique sur le long terme, celle de la gestion des ressources et de la garantie de leur renouvellement. Ces ressources comprennent le capital social qui se trouve dans les lois, les coutumes et les institutions ; elles comprennent aussi le capital matériel de l’environnement et le capital économique d’une économie libre mais régie par la loi. Selon cette vision, le but de la politique n’est pas de réorganiser la société d’après une vision ou un idéal global, tel que l’égalité, la liberté ou la fraternité. Il est de maintenir une résistance vigilante aux forces de l’entropie qui menacent notre équilibre social et écologique. Le but est de transmettre aux générations futures, tout en maintenant et en améliorant, l’ordre dont nous sommes les gardiens temporaires. »
 
