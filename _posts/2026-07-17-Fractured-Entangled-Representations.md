@@ -1,5 +1,5 @@
 ---
-title: 'PAPER REVIEW: Questioning Representational Optimism in Deep Learning: The Fractured Entangled Representation Hypothesis'
+title: 'PAPER REVIEW: "Questioning Representational Optimism in Deep Learning: The Fractured Entangled Representation Hypothesis"'
 date: 2026-07-17
 permalink: /_posts/2026-07-17-Fractured-Entangled-Representations
 tags:
