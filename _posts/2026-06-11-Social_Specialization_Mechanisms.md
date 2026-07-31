@@ -1,5 +1,5 @@
 ---
-title: 'PAPER REVIEW: Dopaminergic mechanisms of dynamical social specialization'
+title: 'PAPER REVIEW: "Dopaminergic mechanisms of dynamical social specialization"'
 date: 2026-06-11
 permalink: /_posts/2026-06-11-Social_Specialization_Mechanisms
 tags:
