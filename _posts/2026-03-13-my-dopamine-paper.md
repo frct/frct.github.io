@@ -1,5 +1,5 @@
 ---
-title: 'MY RESEARCH: Dopamine blockade impairs the exploration-exploitation trade-off in Rats'
+title: 'MY RESEARCH: "Dopamine blockade impairs the exploration-exploitation trade-off in Rats"'
 date: 2026-03-13
 permalink: /_posts/2026-03-13-my-dopamine-paper
 tags:
