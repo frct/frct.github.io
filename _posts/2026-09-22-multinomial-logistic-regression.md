@@ -1,13 +1,21 @@
 ---
+title: 'TUTORIAL: Dynamic and sliding-window Thompson sampling for bandit tasks'
+date: 2026-04-27
+permalink: /posts/2026-04-21-thompson-sampling
+tags:
+  - Tutorials
+  - Reinforcement Learning
+---
+
+---
 
 title: 'TUTORIAL: Fitting multinomial logistic regression models to behavioural data'
 date: 2026-09-22
 permalink: /posts/2026-09-22-multinomial-logistic-regression
 tags:
--Tutorials
--Behavioural modelling
--Statistics
-
+  - Tutorials
+  - Behavioural modelling
+  - Statistics
 ---
 
 (Version française plus bas)
