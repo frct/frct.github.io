@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2025b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 25px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.S1 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S2 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 25px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.CodeBlock { background-color: #F5F5F5; margin: 10px 15px 10px 0; display: inline-block; min-width: 100%; }
+.S3 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S4 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S5 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S6 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.eoOutputWrapper { width: calc(90vw - 10px) !important; }
+.S7 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S8 { color: rgb(33, 33, 33); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234px;  }
+.variableValue { width: 100% !important; }
+.embeddedOutputsMatrixElement,.eoOutputWrapper .matrixElement {    min-height: 18px;    box-sizing: border-box;}
+.embeddedOutputsMatrixElement .matrixElement,.eoOutputWrapper  .matrixElement,.rtcDataTipElement .matrixElement {    position: relative;}
+.matrixElement .variableValue,.rtcDataTipElement .matrixElement .variableValue {    white-space: pre;    display: inline-block;    vertical-align: top;    overflow: hidden;}
+.embeddedOutputsMatrixElement.inlineElement {}
+.embeddedOutputsMatrixElement.inlineElement .topHeaderWrapper {    display: none;}
+.embeddedOutputsMatrixElement.inlineElement .veTable .body {    padding-top: 0 !important;    max-height: 100px;}
+.inlineElement .matrixElement {    max-height: 300px;}
+.embeddedOutputsMatrixElement.rightPaneElement {}
+.rightPaneElement .matrixElement,.rtcDataTipElement .matrixElement {    overflow: hidden;    padding-left: 9px;}
+.rightPaneElement .matrixElement {    margin-bottom: -1px;}
+.embeddedOutputsMatrixElement .matrixElement .valueContainer,.eoOutputWrapper .matrixElement .valueContainer,.rtcDataTipElement .matrixElement .valueContainer {    white-space: nowrap;    margin-bottom: 3px;}
+.embeddedOutputsMatrixElement .matrixElement .valueContainer .horizontalEllipsis.hide,.embeddedOutputsMatrixElement .matrixElement .verticalEllipsis.hide,.eoOutputWrapper .matrixElement .valueContainer .horizontalEllipsis.hide,.eoOutputWrapper .matrixElement .verticalEllipsis.hide,.rtcDataTipElement .matrixElement .valueContainer .horizontalEllipsis.hide,.rtcDataTipElement .matrixElement .verticalEllipsis.hide {    display: none;}
+.embeddedOutputsVariableMatrixElement .matrixElement .valueContainer.hideEllipses .verticalEllipsis, .embeddedOutputsVariableMatrixElement .matrixElement .valueContainer.hideEllipses .horizontalEllipsis {    display:none;}
+.eoOutputWrapper .embeddedOutputsVariableMatrixElement .matrixElement .valueContainer {    cursor: default !important;}
+.embeddedOutputsVariableElement {    white-space: pre-wrap;    word-wrap: break-word;    min-height: 18px;    max-height: 250px;    overflow: auto;}
+.eoOutputWrapper .variableElement {    padding-top: 2px;}
+.embeddedOutputsVariableElement.inlineElement {}
+.inlineElement .variableElement {}
+.embeddedOutputsVariableElement.rightPaneElement {    min-height: 16px;}
+.rightPaneElement .variableElement {    padding-left: 9px;}
+.outputsOnRight .embeddedOutputsVariableElement.rightPaneElement .eoOutputContent {    /* Remove extra space allocated for navigation border */    margin-top: 0;    margin-bottom: 0;}
+.variableNameElement {    margin-bottom: 3px;    display: inline-block;}
+/* * Ellipses as base64 for HTML export. */.matrixElement .horizontalEllipsis,.rtcDataTipElement .matrixElement .horizontalEllipsis {    display: inline-block;    margin-top: 3px;    /* base64 encoded version of images-liveeditor/HEllipsis.png */    width: 30px;    height: 12px;    background-repeat: no-repeat;    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAJCAYAAADO1CeCAAAAJUlEQVR42mP4//8/A70xw0i29BUDFPxnAEtTW37wWDqakIa4pQDvOOG89lHX2gAAAABJRU5ErkJggg==");}
+.matrixElement .verticalEllipsis,.textElement .verticalEllipsis,.rtcDataTipElement .matrixElement .verticalEllipsis,.rtcDataTipElement .textElement .verticalEllipsis {    margin-left: 35px;    /* base64 encoded version of images-liveeditor/VEllipsis.png */    width: 12px;    height: 30px;    background-repeat: no-repeat;    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAZCAYAAAAIcL+IAAAALklEQVR42mP4//8/AzGYgWyFMECMwv8QddRS+P//KyimlmcGUOFoOI6GI/UVAgDnd8Dd4+NCwgAAAABJRU5ErkJggg==");}</style></head><body><div class = rtcContent><h2  class = 'S0'><span>Introduction: What is a Multinomial Logistic Regression?</span></h2><div  class = 'S1'><span></span></div><div  class = 'S1'><span>If you've heard of regression models but aren't sure, you've probably encountered linear regressions. These are statistical models that try to relate two continuous quantities to each other, so that knowing one lets you guess the other. The typical example would be a linear regression linking weight to height; it should come as no surprise that the taller a person is, the heavier they </span><span style=' font-weight: bold;'>tend</span><span> to be. Of course this is a tendency, not an iron law of nature, which is why regression models can be more or less good at predicting. In some cases, you might want the prediction to be based on a categorical variable, for example predicting height based on sex</span></div><div  class = 'S1'><span></span></div><div  class = 'S1'><span>Sometimes the variable we are trying to predict is not a continuous quantity like height but a category or a label. In the simplest cases, there are only two such categories, for instance 'smoker' or 'non-smoker', 'yes' or 'no'. In this case, the go-to regression is the logistic regression which, instead of directly predicting outcomes, tries to predict the probability of one of the outcomes (the other outcome being complementary, knowing one probability is sufficient), or to be exact, the log-odds of this reference outcome : log(p/(1-p))</span></div><h2  class = 'S2'><span>A small simulated dataset</span></h2><div  class = 'S1'><span>Before building the regression model, let's create some synthetic behavioural data. This lets us work through the complete analysis without relying on a particular experimental dataset.</span></div><div  class = 'S1'><span>We'll simulate an experiment with three levers. On every trial, the animal chooses one of the three levers and either receives a reward or not.</span></div><div  class = 'S1'><span>We'll also divide the experiment into several sessions. This is important because when we construct predictors based on previous trials, we don't want the history from the end of one session to become the history for the beginning of the next session.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S3'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%% Simulate some behavioural data</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >rng(1);  </span><span style="color: rgb(0, 128, 19);">% make the example reproducible</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >n_subjects = 5;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >n_sessions = 4;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >trials_per_session = 100;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Columns:</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%   1 = subject</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%   2 = group</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%   3 = session</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%   4 = trial number within session</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%   5 = unused</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%   6 = choice</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%   7 = reward</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >data = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >subject = 1:n_subjects</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% Give each subject a group (1 or 2)</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    group = 1 + (subject &gt; n_subjects/2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">for </span><span >session = 1:n_sessions</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% Simulate choices</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        choices = randi(3, trials_per_session, 1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% Give each lever a different probability of reward</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        reward_probability = [0.7 0.5 0.3];</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        rewards = zeros(trials_per_session, 1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">for </span><span >t = 1:trials_per_session</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            rewards(t) = rand &lt; reward_probability(choices(t));</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% Trial number within the session</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        trial = (1:trials_per_session)';</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% Assemble this session</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        session_data = [ </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            repmat(subject, trials_per_session, 1), </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            repmat(group, trials_per_session, 1), </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            repmat(session, trials_per_session, 1), </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            trial, </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            zeros(trials_per_session, 1), </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            choices, </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            rewards </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            ];</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        data = [data; session_data];</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div></div></div><div  class = 'S6'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>For this example, </span><span style=' font-family: monospace;'>data</span><span> has the same basic structure as the experimental data used later in the tutorial:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S3'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Look at the first few trials</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S7'><span style="white-space: pre"><span >data(1:10,:)</span></span></div><div  class = 'S8'><div class="inlineElement eoOutputWrapper disableDefaultGestureHandling embeddedOutputsVariableMatrixElement" uid="06F67B85" prevent-scroll="true" data-testid="output_0" data-width="1109" style="width: 1139px; white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;" tabindex="-1"><div class="outputLayer selectedOutputDecorationLayer doNotExport" aria-hidden="true" style="white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"></div><div class="outputLayer activeOutputDecorationLayer doNotExport" aria-hidden="true" style="white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"></div><div class="outputLayer scrollableOutputDecorationLayer doNotExport" aria-hidden="true" style="white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"></div><div class="outputLayer navigationFocusLayer doNotExport" aria-hidden="false" role="application" tabindex="-1" style="white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"></div><div class="matrixElement veSpecifier eoOutputContent" role="article" aria-roledescription="Use Browse Mode to explore " aria-description="variable output " style="white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"><div class="veVariableName variableNameElement double" style="width: 1109px; white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"><div class="headerElementClickToInteract" style="white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"><span style="white-space: normal; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;">ans = </span><span class="veVariableValueSummary veMetaSummary" style="white-space: normal; font-style: italic; color: rgb(97, 97, 97); font-size: 12px;">10×7</span></div></div><div class="valueContainer" data-layout="{&quot;columnWidth&quot;:40,&quot;totalColumns&quot;:7,&quot;totalRows&quot;:10,&quot;charsPerColumn&quot;:6}" style="white-space: nowrap; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"><div class="variableValue" style="width: 282px; white-space: pre; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;">     1     1     1     1     0     2     1
+     1     1     1     2     0     3     0
+     1     1     1     3     0     1     0
+     1     1     1     4     0     1     1
+     1     1     1     5     0     1     0
+     1     1     1     6     0     1     1
+     1     1     1     7     0     1     1
+     1     1     1     8     0     2     0
+     1     1     1     9     0     2     0
+     1     1     1    10     0     2     0
+</div><div class="horizontalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"><mw-icon icon-id="meatballMenuUI" icon-width="16" icon-height="16" icon-config="{}" svg-path="" style="white-space: nowrap; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"></mw-icon></div><div class="verticalEllipsis hide" style="white-space: nowrap; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"><mw-icon icon-id="kebabMenuUI" icon-width="16" icon-height="16" icon-config="{}" svg-path="" style="white-space: nowrap; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;"></mw-icon></div></div></div></div></div></div></div><div  class = 'S6'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>The last two columns contain the behavioural variables we are interested in:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S3'><span style="white-space: pre"><span >choices = data(:,6);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >rewards = data(:,7);</span></span></div></div></div><div  class = 'S6'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>For example, a sequence such as</span></div><div  class = 'S1'><span style=' font-family: monospace;'>Choice:   1  2  1  3  1</span></div><div  class = 'S1'><span style=' font-family: monospace;'>Reward:   1  0  1  0  1</span></div><div  class = 'S1'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>means that the animal chose Lever 1 and was rewarded, then chose Lever 2 and was not rewarded, and so on.</span><span style=' font-weight: bold;'>Constructing the lagged predictors</span></div><div  class = 'S1'><span>We now ask whether these previous choices and rewards can predict the choice on the current trial.</span></div><div  class = 'S1'><span>Let's use the previous five trials as predictors:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S3'><span style="white-space: pre"><span >horizon = 5;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >n_levers = 3;</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >ref_lever = 3;</span></span></div></div></div><div  class = 'S6'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>There are two dummy variables for previous choice because Lever 3 is our reference category:</span></div><div  class = 'S1'><span style=' font-family: monospace;'>choice_1</span></div><div  class = 'S1'><span style=' font-family: monospace;'>choice_2</span></div><div  class = 'S1'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>There are then three variables describing rewarded choices:</span></div><div  class = 'S1'><span style=' font-family: monospace;'>reward_1</span></div><div  class = 'S1'><span style=' font-family: monospace;'>reward_2</span></div><div  class = 'S1'><span style=' font-family: monospace;'>reward_3</span></div><div  class = 'S1'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>Therefore, each lag contributes five columns to our design matrix:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S3'><span style="white-space: pre"><span >non_ref_levers = setdiff(1:n_levers, ref_lever);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >n_choice_cols = n_levers - 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >n_reward_cols = n_levers;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >cols_per_lag = n_choice_cols + n_reward_cols;</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre"><span >n_pred = cols_per_lag * horizon;</span></span></div></div></div><div  class = 'S6'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>We can now construct </span><span style=' font-family: monospace;'>X</span><span> and </span><span style=' font-family: monospace;'>y</span><span> subject by subject.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S3'><span style="white-space: pre"><span >subjects = unique(data(:,1))';</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >subject = subjects</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% Extract this subject's data</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    rat_data = data(data(:,1) == subject,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    choices = rat_data(:,6);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    rewards = rat_data(:,7);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    sessions = unique(rat_data(:,3));</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    n_sessions = length(sessions);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    numTrials = length(choices);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% We lose the first 'horizon' trials of every session because</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% there is not enough previous history to construct the predictors.</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    n_rows = numTrials - horizon * n_sessions;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    X = zeros(n_rows, n_pred);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    y = zeros(n_rows, 1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    row = 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">for </span><span >t = 1:numTrials</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        trial = rat_data(t,4);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% Skip the first 'horizon' trials of each session</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">if </span><span >trial &lt;= horizon</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(14, 0, 255);">continue</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% Current choice is the response variable</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        y(row) = choices(t);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% -------------------------------------------------------------</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% Construct predictors from previous trials</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% -------------------------------------------------------------</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">for </span><span >k = 1:horizon</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% First column belonging to this lag</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            lag_offset = (k-1) * cols_per_lag;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            past_choice = choices(t-k);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            past_reward = rewards(t-k);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% ---------------------------------------------------------</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% Previous choice</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% ---------------------------------------------------------</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% Lever 3 is the reference category, so it does not get</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% its own dummy variable.</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(14, 0, 255);">if </span><span >past_choice == 1</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >                X(row, lag_offset + 1) = 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(14, 0, 255);">elseif </span><span >past_choice == 2</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >                X(row, lag_offset + 2) = 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% ---------------------------------------------------------</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% Previous rewarded choice</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% ---------------------------------------------------------</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% If the previous choice was rewarded, activate the</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(0, 128, 19);">% indicator corresponding to the chosen lever.</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(14, 0, 255);">if </span><span >past_reward == 1</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >                </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >                reward_col = lag_offset + </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >                    n_choice_cols + past_choice;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >                </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >                X(row, reward_col) = 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >                </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >            </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        row = row + 1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% Fit the multinomial logistic regression</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    [B, dev, stats] = mnrfit(X, y);</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">if </span><span >subject == 5</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        figure()</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >        plot(B(:,1))</span></span></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S7'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div><div  class = 'S8'><img src="data:image/png;base64,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"></div></div></div><div  class = 'S6'><span style=' font-family: monospace;'></span></div><div  class = 'S1'><span>We now have a completely self-contained example of the analysis. The design matrix contains the animal's behavioural history, while y contains the choice made on the current trial.</span></div><div  class = 'S1'><span>For horizon = 5, there are:</span></div><div  class = 'S1'><span>5 predictors per lag × 5 lags = 25 predictors</span></div><div  class = 'S1'><span></span></div><div  class = 'S1'><span>so X has 25 columns.</span></div><div  class = 'S1'><span>The first five columns describe the immediately preceding trial, the next five describe the trial before that, and so on.</span></div><div  class = 'S1'><span>This gives us a model of the form:</span></div><div  class = 'S1'><span>Current choice</span></div><div  class = 'S1'><span>↑</span></div><div  class = 'S1'><span>│</span></div><div  class = 'S1'><span>├── choice 1, 1 trial ago</span></div><div  class = 'S1'><span>├── choice 2, 1 trial ago</span></div><div  class = 'S1'><span>├── reward on lever 1, 1 trial ago</span></div><div  class = 'S1'><span>├── reward on lever 2, 1 trial ago</span></div><div  class = 'S1'><span>├── reward on lever 3, 1 trial ago</span></div><div  class = 'S1'><span>│</span></div><div  class = 'S1'><span>├── choice 1, 2 trials ago</span></div><div  class = 'S1'><span>├── choice 2, 2 trials ago</span></div><div  class = 'S1'><span>├── ...</span></div><div  class = 'S1'><span>    │</span></div><div  class = 'S1'><span>└── history from 5 trials ago</span></div><div  class = 'S1'><span></span></div><div  class = 'S1'><span>The coefficients estimated by mnrfit therefore tell us how each component of recent behavioural history is associated with the probability of making each of the three possible choices on the current trial.</span></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Introduction: What is a Multinomial Logistic Regression?
+% 
+% 
+% If you've heard of regression models but aren't sure, you've probably encountered 
+% linear regressions. These are statistical models that try to relate two continuous 
+% quantities to each other, so that knowing one lets you guess the other. The 
+% typical example would be a linear regression linking weight to height; it should 
+% come as no surprise that the taller a person is, the heavier they *tend* to 
+% be. Of course this is a tendency, not an iron law of nature, which is why regression 
+% models can be more or less good at predicting. In some cases, you might want 
+% the prediction to be based on a categorical variable, for example predicting 
+% height based on sex
+% 
+% 
+% 
+% Sometimes the variable we are trying to predict is not a continuous quantity 
+% like height but a category or a label. In the simplest cases, there are only 
+% two such categories, for instance 'smoker' or 'non-smoker', 'yes' or 'no'. In 
+% this case, the go-to regression is the logistic regression which, instead of 
+% directly predicting outcomes, tries to predict the probability of one of the 
+% outcomes (the other outcome being complementary, knowing one probability is 
+% sufficient), or to be exact, the log-odds of this reference outcome : log(p/(1-p))
+%% A small simulated dataset
+% Before building the regression model, let's create some synthetic behavioural 
+% data. This lets us work through the complete analysis without relying on a particular 
+% experimental dataset.
+% 
+% We'll simulate an experiment with three levers. On every trial, the animal 
+% chooses one of the three levers and either receives a reward or not.
+% 
+% We'll also divide the experiment into several sessions. This is important 
+% because when we construct predictors based on previous trials, we don't want 
+% the history from the end of one session to become the history for the beginning 
+% of the next session.
+
+%% Simulate some behavioural data
+
+rng(1);  % make the example reproducible
+
+n_subjects = 5;
+n_sessions = 4;
+trials_per_session = 100;
+
+% Columns:
+%   1 = subject
+%   2 = group
+%   3 = session
+%   4 = trial number within session
+%   5 = unused
+%   6 = choice
+%   7 = reward
+
+data = [];
+
+for subject = 1:n_subjects
+    
+    % Give each subject a group (1 or 2)
+    group = 1 + (subject > n_subjects/2);
+    
+    for session = 1:n_sessions
+        
+        % Simulate choices
+        choices = randi(3, trials_per_session, 1);
+        
+        % Give each lever a different probability of reward
+        reward_probability = [0.7 0.5 0.3];
+        
+        rewards = zeros(trials_per_session, 1);
+        
+        for t = 1:trials_per_session
+            rewards(t) = rand < reward_probability(choices(t));
+        end
+        
+        % Trial number within the session
+        trial = (1:trials_per_session)';
+        
+        % Assemble this session
+        session_data = [ ...
+            repmat(subject, trials_per_session, 1), ...
+            repmat(group, trials_per_session, 1), ...
+            repmat(session, trials_per_session, 1), ...
+            trial, ...
+            zeros(trials_per_session, 1), ...
+            choices, ...
+            rewards ...
+            ];
+        
+        data = [data; session_data];
+        
+    end
+end
+%% 
+% 
+% 
+% For this example, |data| has the same basic structure as the experimental 
+% data used later in the tutorial:
+
+% Look at the first few trials
+data(1:10,:)
+%% 
+% 
+% 
+% The last two columns contain the behavioural variables we are interested in:
+
+choices = data(:,6);
+rewards = data(:,7);
+%% 
+% 
+% 
+% For example, a sequence such as
+% 
+% |Choice:   1  2  1  3  1|
+% 
+% |Reward:   1  0  1  0  1|
+% 
+% 
+% 
+% means that the animal chose Lever 1 and was rewarded, then chose Lever 2 and 
+% was not rewarded, and so on.*Constructing the lagged predictors*
+% 
+% We now ask whether these previous choices and rewards can predict the choice 
+% on the current trial.
+% 
+% Let's use the previous five trials as predictors:
+
+horizon = 5;
+n_levers = 3;
+ref_lever = 3;
+%% 
+% 
+% 
+% There are two dummy variables for previous choice because Lever 3 is our reference 
+% category:
+% 
+% |choice_1|
+% 
+% |choice_2|
+% 
+% 
+% 
+% There are then three variables describing rewarded choices:
+% 
+% |reward_1|
+% 
+% |reward_2|
+% 
+% |reward_3|
+% 
+% 
+% 
+% Therefore, each lag contributes five columns to our design matrix:
+
+non_ref_levers = setdiff(1:n_levers, ref_lever);
+
+n_choice_cols = n_levers - 1;
+n_reward_cols = n_levers;
+
+cols_per_lag = n_choice_cols + n_reward_cols;
+n_pred = cols_per_lag * horizon;
+%% 
+% 
+% 
+% We can now construct |X| and |y| subject by subject.
+
+subjects = unique(data(:,1))';
+
+for subject = subjects
+    
+    % Extract this subject's data
+    rat_data = data(data(:,1) == subject,:);
+    
+    choices = rat_data(:,6);
+    rewards = rat_data(:,7);
+    
+    sessions = unique(rat_data(:,3));
+    n_sessions = length(sessions);
+    
+    numTrials = length(choices);
+    
+    % We lose the first 'horizon' trials of every session because
+    % there is not enough previous history to construct the predictors.
+    n_rows = numTrials - horizon * n_sessions;
+    
+    X = zeros(n_rows, n_pred);
+    y = zeros(n_rows, 1);
+    
+    row = 1;
+    
+    for t = 1:numTrials
+        
+        trial = rat_data(t,4);
+        
+        % Skip the first 'horizon' trials of each session
+        if trial <= horizon
+            continue
+        end
+        
+        % Current choice is the response variable
+        y(row) = choices(t);
+        
+        % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+        % Construct predictors from previous trials
+        % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+        
+        for k = 1:horizon
+            
+            % First column belonging to this lag
+            lag_offset = (k-1) * cols_per_lag;
+            
+            past_choice = choices(t-k);
+            past_reward = rewards(t-k);
+            
+            % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+            % Previous choice
+            % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+            
+            % Lever 3 is the reference category, so it does not get
+            % its own dummy variable.
+            if past_choice == 1
+                X(row, lag_offset + 1) = 1;
+            elseif past_choice == 2
+                X(row, lag_offset + 2) = 1;
+            end
+            
+            % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+            % Previous rewarded choice
+            % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+            
+            % If the previous choice was rewarded, activate the
+            % indicator corresponding to the chosen lever.
+            if past_reward == 1
+                
+                reward_col = lag_offset + ...
+                    n_choice_cols + past_choice;
+                
+                X(row, reward_col) = 1;
+                
+            end
+            
+        end
+        
+        row = row + 1;
+    end
+    
+    % Fit the multinomial logistic regression
+    [B, dev, stats] = mnrfit(X, y);
+    
+    if subject == 5
+        figure()
+        plot(B(:,1))
+    end
+end
+%% 
+% 
+% 
+% We now have a completely self-contained example of the analysis. The design 
+% matrix contains the animal's behavioural history, while y contains the choice 
+% made on the current trial.
+% 
+% For horizon = 5, there are:
+% 
+% 5 predictors per lag × 5 lags = 25 predictors
+% 
+% 
+% 
+% so X has 25 columns.
+% 
+% The first five columns describe the immediately preceding trial, the next 
+% five describe the trial before that, and so on.
+% 
+% This gives us a model of the form:
+% 
+% Current choice
+% 
+% ↑
+% 
+% │
+% 
+% ├── choice 1, 1 trial ago
+% 
+% ├── choice 2, 1 trial ago
+% 
+% ├── reward on lever 1, 1 trial ago
+% 
+% ├── reward on lever 2, 1 trial ago
+% 
+% ├── reward on lever 3, 1 trial ago
+% 
+% │
+% 
+% ├── choice 1, 2 trials ago
+% 
+% ├── choice 2, 2 trials ago
+% 
+% ├── ...
+% 
+% │
+% 
+% └── history from 5 trials ago
+% 
+% 
+% 
+% The coefficients estimated by mnrfit therefore tell us how each component 
+% of recent behavioural history is associated with the probability of making each 
+% of the three possible choices on the current trial.
+##### SOURCE END #####
+-->
+</div></body></html>
