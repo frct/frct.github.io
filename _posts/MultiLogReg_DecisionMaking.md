@@ -107,7 +107,7 @@ grid on;
 
 <figure>
   <img
-    src="{{ '/images/multinomial-regression/figure_0.png' | relative_url }}"
+    src="{{ '/images/multinomial_regression/figure_0.png' | relative_url }}"
     alt="Fig0"
   >
   <figcaption>
