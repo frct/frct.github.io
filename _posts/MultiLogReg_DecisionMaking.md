@@ -1,3 +1,13 @@
+---
+title: 'TUTORIAL: Fitting multinomial logistic regression models to behavioural data'
+date: 2026-09-22
+permalink: /posts/MultiLogReg_DecisionMaking
+tags:
+  - Tutorials
+  - Behavioural modelling
+  - Statistics
+---
+
 
 # <span style="color:rgb(213,80,0)">TUTORIAL: Running a multinomial logistic regression to analyse a multi\-armed bandit task in MATLAB</span>
 
