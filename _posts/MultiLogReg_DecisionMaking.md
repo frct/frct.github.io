@@ -105,6 +105,8 @@ legend('Lever 1', 'Lever 2', 'Lever 3', 'Location', 'best');
 grid on;
 ```
 
+![Predicted choice probabilities]({{ '/images/multinomial_regression/figure_0.png' | relative_url }})
+
 <figure>
   <img
     src="{{ '/images/multinomial_regression/figure_0.png' | relative_url }}"
