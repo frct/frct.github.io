@@ -18,8 +18,6 @@ This post introduces multinomial logistic regression through a hands-on MATLAB L
 
 [📓 Download the MATLAB Live Script](/files/MultinomialLogisticRegression.mlx)
 
-[📄 Download the tutorial (PDF)](/files/MultinomialLogisticRegression.pdf)
-
 ---
 
 Ce tutoriel présente la régression logistique multinomiale à travers un exemple pratique utilisant un Live Script MATLAB. Il montre comment modéliser les choix comportementaux en fonction des choix précédents et des récompenses obtenues, en utilisant un codage indicateur explicite pour construire la matrice de régression.
@@ -27,5 +25,3 @@ Ce tutoriel présente la régression logistique multinomiale à travers un exemp
 [📊 Visualiser le tutoriel (HTML)](/files/MultinomialLogisticRegression_fr.html)
 
 [📓 Télécharger le Live Script MATLAB](/files/MultinomialLogisticRegression_fr.mlx)
-
-[📄 Télécharger le tutoriel (PDF)](/files/MultinomialLogisticRegression_fr.pdf)
