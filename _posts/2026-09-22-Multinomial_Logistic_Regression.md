@@ -12,7 +12,7 @@ tags:
 
 This post introduces multinomial logistic regression through a hands-on MATLAB Live Script. The tutorial shows how to model behavioural choices as a function of choices and rewards received on previous trials, using explicit dummy coding to construct the regression design matrix.
 
-[📓 Download the MATLAB Live Script](/files/MultiLogReg.mlx)
+[📓 Download the MATLAB Live Script](/files/MultiLogReg_eng.mlx)
 
 # What is Multinomial Logistic Regression?
 
