@@ -1,7 +1,7 @@
 ---
 title: 'TUTORIAL: Fitting multinomial logistic regression models to behavioural data'
 date: 2026-09-22
-permalink: /posts/2026-09-22_multinomial_logistic_regression
+permalink: /_posts/2026-09-22-Multinomial_Logistic_Regression
 tags:
   - Tutorials
   - Behavioural modelling
