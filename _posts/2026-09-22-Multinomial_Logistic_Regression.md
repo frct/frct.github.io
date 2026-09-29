@@ -211,7 +211,7 @@ grid on;
 
 Compared to the running averages we plotted before, the fitted probabilities reproduce broad patterns of the original data. We see dominance of the different levers alternating between blocks, and, unless you have changed the random seed, you should see that the fourth block, in which the agent for some random reason had trouble picking the correct lever 1, is also ambiguous from the fitted model's point of view, thus matching an idiosyncratic feature of the original data.
 
-# A Quick Stab at Interpreting the Fitted Model
+# A Misguided Attempt to Interpret the Fitted Model
 
 Following the guidance of Lau and Glimcher, you might want to simply plot some of the fitted coefficients to see how past predictors affect choices. An obvious strategy could be to look at the separate impacts of being rewarded on a lever and of selecting a lever without necessarily being rewarded on the log-odds of that same lever, as measurements of the effects of reinforcement and choice persistance on behaviour. In the case of lever 1, the coefficients for the predictor `lever 1 chosen` are found at indices 2, 7, 12, etc. of `B` and the coefficients for the predictor `lever 1 rewarded` at indices 4, 9, 14, etc. For lever 2, we are interested with the coefficients of `lever 2 chosen` (indices 3, 8, 13, ...) and `lever 2 rewarded` (indices 5, 10, 15, ...).
 
