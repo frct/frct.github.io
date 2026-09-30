@@ -54,7 +54,7 @@ I've explained how to deal with nominal dependent variables, now comes the turn 
 
  $$ y_i =\beta_0 +\beta_1 d_i +\varepsilon_{i\;} $$ 
 
-The meaning of $\beta_0$ and $\beta_1$ follows directly from the conditional expectation of $Y$. For a male, $E\left(Y|d=0\right)=\beta_0$ is the expected height of a male (estimated by the sample mean height of the males); for a female, $E\left(Y|d=1\right) =\beta_0 +\beta_1$ which means that $\beta_1$ is the difference in expected height between females and males. With three categories we would use two dummy variables, and each coefficient would be the difference in expected outcome between that category and the reference category.
+The meaning of $\beta_0$ and $\beta_1$ follows directly from the conditional expectation of $Y$. For a male, $E(Y \mid d=0)=\beta_0$ is the expected height of a male (estimated by the sample mean height of the males); for a female, $E(Y \mid d=1) =\beta_0 +\beta_1$ which means that $\beta_1$ is the difference in expected height between females and males. With three categories we would use two dummy variables, and each coefficient would be the difference in expected outcome between that category and the reference category.
 
 # A Small Simulated Dataset
 
