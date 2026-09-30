@@ -24,7 +24,7 @@ where $$\epsilon_i$$ is a random error term with zero mean. With this assumption
 
  $$ E(Y|x_i) = \beta_0 +\beta_1 x_i $$ 
 
-The central question, which applies to any regression model, is to find the parameter values that fit the data best according to some criterion: for linear regression the sum of squared errors between observations $$y_i$$ and expected values $$ E(Y|x_i) $$ is minimised. A first extension is to admit multiple predictors $$x_1, ... ,x_p$$, collected in the vector $$\mathbf{x}=(x_1, ...,x_p)^T$$, in which case the model becomes:
+The central question, which applies to any regression model, is to find the parameter values that fit the data best according to some criterion: for linear regression the sum of squared errors between observations $$y_i$$ and expected values $$ E(Y \mid x_i) $$ is minimised. A first extension is to admit multiple predictors $$x_1, ... ,x_p$$, collected in the vector $$\mathbf{x}=(x_1, ...,x_p)^T$$, in which case the model becomes:
 
  $$ E(Y|\mathbf{x}) =\beta_0 +\beta_1 x_1 +\beta_2 x_2 + ... +\beta_p x_p =\beta_0 +\sum_{j=1}^p \beta_j x_j $$ 
 
