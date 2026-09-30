@@ -16,11 +16,11 @@ This post introduces multinomial logistic regression through a hands-on MATLAB L
 
 # What is Multinomial Logistic Regression?
 
-In statistical analysis, **regression** models are a way of estimating the relationship between an outcome of interest, the so\-called **dependent variable** (or response), and one or more predictors, also known as **independent variables**. This requires observations $$(x_i ,y_i$$, $$i=1,...,n$$, of a response $$y_i$$ paired with predictor values $$x_i$$, to which a model is then fitted in order to predict $$Y$$ for different values of $$X$$ (because these are random variables, I use capitalised letters to distinguish them from the observations which are samples of these random variables). The most famous example is probably a **simple linear regression** in which the dependent and independent variables are continuous quantities, such as when trying to predict weight from height. The model is based on the assumption that, given the predictor, the response equals a linear function of it plus a random error:
+In statistical analysis, **regression** models are a way of estimating the relationship between an outcome of interest, the so\-called **dependent variable** (or response), and one or more predictors, also known as **independent variables**. This requires observations $$(x_i ,y_i)$$, $$i=1,...,n$$, of a response $$y_i$$ paired with predictor values $$x_i$$, to which a model is then fitted in order to predict $$Y$$ for different values of $$X$$ (because these are random variables, I use capitalised letters to distinguish them from the observations which are samples of these random variables). The most famous example is probably a **simple linear regression** in which the dependent and independent variables are continuous quantities, such as when trying to predict weight from height. The model is based on the assumption that, given the predictor, the response equals a linear function of it plus a random error:
 
- $$ y_i =\beta_0 +\beta_1 x_i +\epsilon_i $$ 
+ $$ y_i =\beta_0 +\beta_1 x_i +\varepsilon_i $$ 
 
-where $$\epsilon_i$$ is a random error term with zero mean. With this assumption,  **the linear regression model describes the expected value of Y conditioned on each observation $$x_{i}$$** as a simple trend line with an intercept $$\beta_0$$ and a slope $$\beta_1$$:
+where $$\varepsilon_i$$ is a random error term with zero mean. With this assumption,  **the linear regression model describes the expected value of Y conditioned on each observation $$x_{i}$$** as a simple trend line with an intercept $$\beta_0$$ and a slope $$\beta_1$$:
 
  $$ E(Y|x_i) = \beta_0 +\beta_1 x_i $$ 
 
@@ -28,7 +28,7 @@ The central question, which applies to any regression model, is to find the para
 
  $$ E(Y|\mathbf{x}) =\beta_0 +\beta_1 x_1 +\beta_2 x_2 + ... +\beta_p x_p =\beta_0 +\sum_{j=1}^p \beta_j x_j $$ 
 
-Sometimes the variable we want to predict is not a continuous quantity like height but a category, i.e. a **nominal variable**. In the simplest case there are only two categories, for instance `smoker` vs. `non-smoker` or `yes` vs. `no`. A linear model cannot be applied directly to such outcomes, since they are not numbers, and if we coded them as 0 and 1 a linear function of $$\mathbf{x}$$ would not keep the predicted probability between 0 and 1. The trick at the heart of **logistic regression** is to model the probability $$\pi(\mathbf{x})=P(Y=\textrm{yes} \mid \mathbf{x})$$ through its **log-odds** (or logit), the logarithm of the **odds** $$\pi /(1-\pi)$$, which can take any real value, and to make this quantity a linear function of the predictors:
+Sometimes the variable we want to predict is not a continuous quantity like height but a category, i.e. a **nominal variable**. In the simplest case there are only two categories, for instance `smoker` vs. `non-smoker` or `yes` vs. `no`. A linear model cannot be applied directly to such outcomes, since they are not numbers, and if we coded them as 0 and 1 a linear function of $$\mathbf{x}$$ would not keep the predicted probability between 0 and 1. The trick at the heart of **logistic regression** is to model the probability $$\pi(\mathbf{x})=P(Y=\textrm{yes} \mid \mathbf{x})$$ through its **log-odds** (or logit), the logarithm of the **odds** $$\pi /(1-\pi)$$, which can take any real value, and to make **this** quantity a linear function of the predictors:
 
  $$ \log \frac{\pi \left(\mathbf{x}\right)}{1-\pi \left(\mathbf{x}\right)}=\beta_0 +\sum_{j=1}^p \beta_j x_j $$ 
 
@@ -38,7 +38,7 @@ Finally, when there are more than two categories, a **multinomial logistic regre
 
  $$ \left\lbrace \begin{array}{c} \log \frac{\pi_1 \left(\mathbf{x}\right)}{\pi_3 \left(\mathbf{x}\right)}=\beta_{1,0} +\sum_{j=1}^p \beta_{1,j} x_j =\eta_1 \newline \log \frac{\pi_2 \left(\mathbf{x}\right)}{\pi_3 \left(\mathbf{x}\right)}=\beta_{2,0} +\sum_{j=1}^p \beta_{2,j} x_j =\eta_2  \end{array}\right. $$ 
 
-Here $$\beta_{k,j}$$ is the coefficient of predictor $$j$$ in the equation for category $$k$$ ($$j=0$$ being the intercept), and $$\eta_k$$ is the linear predictor of equation $$k$$. Note that the predictors $$x_j$$ are the same in both equations: **predictors are the same for both equations, it is how the coefficients of each equation transform them that produces different responses**. Once the parameters are fitted, you can work your way back to the estimated probabilities based on two facts. First, the definition of the log-odds gives $$\pi_k =\pi_3 e^{\eta_k }$$ for $$k=1,2$$. Second, the probabilities sum to one, so that:
+Here $$\beta_{k,j}$$ is the coefficient of predictor $$j$$ in the equation for category $$k$$ ($$j=0$$ being the intercept), and $$\eta_k$$ is the linear predictor of equation $$k$$. Note that the predictors $$x_j$$ are the same in both equations: **predictors are shared between all equations, it is how the coefficients of each equation transform them that produces different responses**. Once the parameters are fitted, you can work your way back to the estimated probabilities based on two facts. First, the definition of the log-odds gives $$\pi_k =\pi_3 e^{\eta_k }$$ for $$k=1,2$$. Second, the probabilities sum to one, so that:
 
  $$ \pi_3 \left(1+e^{\eta_1 } +e^{\eta_2 } \right)=\pi_1 +\pi_2 +\pi_3 =1 $$ 
 
@@ -46,7 +46,7 @@ Solving for $$\pi_3$$ and substituting back, the estimated probability of each a
 
  $$ \left\lbrace \begin{array}{c} \pi_1 =\frac{e^{\eta_1 } }{1+e^{\eta_1 } +e^{\eta_2 } }\newline \pi_2 =\frac{e^{\eta_2 } }{1+e^{\eta_1 } +e^{\eta_2 } }\newline \pi_3 =\frac{1}{1+e^{\eta_1 } +e^{\eta_2 } } \end{array}\right. $$ 
 
-It's worth noticing here how complex these probabilities are, as they depend on both $$\eta$$ predictors; simply increasing $$\eta_1$$, despite increasing the log-odds of choosing lever 1 relative to lever 3, does not guarantee an overall increase in $$\pi_1$$.
+It's worth noticing here how complex these probabilities are, as they all depend on both $$\eta$$ predictors; simply increasing $$\eta_1$$, despite increasing the log-odds of choosing lever 1 relative to lever 3, does not guarantee an overall increase in $$\pi_1$$.
 
 # Dummy Coding
 
@@ -58,7 +58,7 @@ The meaning of $$\beta_0$$ and $$\beta_1$$ follows directly from the conditional
 
 # A Small Simulated Dataset
 
-We are now ready to tackle the main objective of this tutorial, which is to fit a multinomial logistic regression to data collected in a **multi\-armed bandit task**. These tasks, which are a classic **reinforcement learning** problem commonly used in neuroscience, are made of discrete trials in which subjects have to choose one action among several in the hope of obtaining a reward. Past rewards and choices can be used as predictors in a logistic regression model to determine the impact of these past events on current choices, as in the study of **[Lau and Glimcher (2005)](https://doi.org/10.1901/jeab.2005.110-04)** which used logistic regression to study the choices of monkeys in a two\-alternative task and found that the impact of past rewards decayed over time. This study inspired me to test a more complex multinomial logistic regression when analysing a three\-armed bandit task (**[Cinotti et al. (2024)](https://doi.org/10.1111/ejn.16449)**), which proved to be a more difficult challenge than initially expected so that I eventually resorted to simple logistic regressions fitted separately to each action. I have since had the opportunity to revisit this technique which prompted me to write this tutorial in the hope it might help others faced with similar difficulties.
+We are now ready to tackle the main objective of this tutorial, which is to fit a multinomial logistic regression to data collected in a **multi\-armed bandit task**. These tasks, which are a classic **reinforcement learning** problem commonly used in neuroscience, are made of discrete trials in which subjects have to choose one action among several in the hope of obtaining a reward. Past rewards and choices can be used as predictors in a logistic regression model to determine the impact of these past events on current choices, as in the study of **[Lau and Glimcher (2005)](https://doi.org/10.1901/jeab.2005.110-04)** which used logistic regression to study the choices of monkeys in a two-alternative task and found that the impact of past rewards decayed over time. This study inspired me to test a more complex multinomial logistic regression when analysing a three-armed bandit task (**[Cinotti et al. (2024)](https://doi.org/10.1111/ejn.16449)**), which proved to be a more difficult challenge than initially expected so that I eventually resorted to simple logistic regressions fitted separately to each action. I have since had the opportunity to revisit this technique which prompted me to write this tutorial in the hope it might help others faced with similar difficulties.
 
 
 To start with, we shall need data, which will be a simple synthetic collection of 900 trials with recorded choices and rewards. This virtual experiment will consist of blocks of 100 trials during which one of the levers will be rewarded with a 60% probability if selected, while the two others will be rewarded with a probability of 20% each. To generate plausibly realistic choices, we will use a Q\-learning model with a learning rate of 0.1, which also serves as the forgetting rate of the values of non\-selected levers, paired with a softmax action selection with an inverse temperature of 5. If you do not understand what this all means, all you need to know is that this is a way of generating interesting data.
@@ -104,7 +104,7 @@ end
 
 ```
 
-To get an idea of what this data looks like, here is a quick plot of the rates of selection of each lever using 20\-trial moving averages. You should see distinct periods in which the three levers dominate in turn for blocks of roughly 100 trials, illustrating how the Q\-learning algorithm successfully keeps track of the reward schedule. Choices are nonetheless noisy, and if you have kept the same random seed, you'll notice that in the fourth block (trials 300\-400), the selection rate of lever 1, which was in fact the best lever for that block, was quite low.
+To get an idea of what this data looks like, here is a quick plot of the rates of selection of each lever using 20-trial moving averages. You should see distinct periods in which the three levers dominate in turn for blocks of roughly 100 trials, illustrating how the Q-learning algorithm successfully keeps track of the reward schedule. Choices are nonetheless noisy, and if you have kept the same random seed, you'll notice that in the fourth block (trials 300-400), the selection rate of lever 1, which was in fact the best lever for that block, was quite low.
 
 ```matlab
 %% running averages of lever selection for quick visualisation
@@ -127,7 +127,7 @@ We now ask whether previous choices and rewards can predict the choice on the cu
 
  $$ \log \frac{P\left.\left(c_t =k\right|{\mathbf{x}}_t \right)}{P\left.\left(c_t =3\right|{\mathbf{x}}_t \right)}=\beta_{k,0} +\sum_{j=1}^p \beta_{k,j} x_{t,j} ,~~k=1,2 $$ 
 
-A few things to note about this design. There is no predictor for having chosen lever 3, which means lever 3 is the reference lever, as above. The last three predictors are choice-reward combinations, `rewarded on lever k` meaning that lever $$k$$ was chosen and rewarded: predictor 3 is the effect of being rewarded on lever 1 in addition to the effect of selecting lever 1, which is predictor 1. Alternative designs might want to separate these effects differently, and this choice matters when trying to interpret the final results. The **design matrix $$X$$** is the collection of the predictors for every trial; it has one row per observation (trial) and one column per predictor. The trial-by-trial choices $$c_t$$ are similarly collected in the response vector $$y$$.
+A few things to note about this design. There is no predictor for having chosen lever 3, which means lever 3 is the reference lever, as above. The last three predictors are choice-reward combinations, `rewarded on lever k` meaning that lever $$k$$ was chosen and rewarded: predictor 3 is the effect of being rewarded on lever 1 in addition to the effect of selecting lever 1, which is predictor 1. Alternative designs might want to separate these effects differently, and this choice matters when trying to interpret the final results. The **design matrix $$X$$** is the collection of the predictors for every trial; it has one row per observation (trial) and one column per predictor. The trial-by-trial choices $$c_t$$ are similarly collected in the **response vector $$y$$**.
 
 ```matlab
 horizon = 10;
@@ -202,9 +202,7 @@ end
 To get a better sense of what $$X$$ looks like, it's worth giving a look at the first few rows of the original data and $$X$$ side-by-side:
 
 ```matlab
-%% Inspect the raw data and the first rows of X
-
-% --- Original data: trial number, choice and reward in one table ---
+% Original data: trial number, choice and reward in one table
 n_show = 15;
 dataTable = table((1:n_show)', data.choices(1:n_show), data.rewards(1:n_show), ...
     'VariableNames', {'Trial', 'Choice', 'Reward'});
@@ -234,7 +232,7 @@ disp(dataTable)
 
 ```matlab
 
-% --- First rows of X, labelled by the trial they predict ---
+% First rows of X, labelled by the trial they predict
 n_rows_shown = 5;
 lags_shown   = 2;   % lags 1 and 2 
 
@@ -248,7 +246,7 @@ end
 XTable = array2table(X(1:n_rows_shown, 1:numel(predNames)), ...
     'VariableNames', cellstr(predNames));
 
-% Add the trial each row predicts and the choice made on it (y)
+% Add the trial each row predicts
 XTable = addvars(XTable, (horizon + 1 : horizon + n_rows_shown)', ...
     'Before', 1, 'NewVariableNames', 'Trial');
 disp(XTable)
@@ -270,7 +268,7 @@ The first row of $$X$$ corresponds to trial 11, and the first five columns descr
 
 # Fitting the Regression Model
 
-We have now built our design matrix $$X$$, which contains the agent's behavioural history, and $$y$$, which contains the choice made on the current trial. For `horizon = 10`, there are 5 predictors per lag × 10 lags = 50 predictors, so $$X$$ has 50 columns. The first five columns describe the immediately preceding trial (`lag 1`), the next five describe the trial before that (`lag 2`), and so on. To fit the multinomial regression model by maximum likelihood we use the built-in `mnrfit` function. Recent MATLAB releases also provide a more recent `fitmnr` function, but I chose `mnrfit` because constructing the dummy\-coded design matrix $$X$$ makes the predictor encoding more transparent.
+We have now built our design matrix $$X$$, which contains the agent's behavioural history, and $$y$$, which contains the choice made on the current trial. For `horizon = 10`, there are 5 predictors per lag × 10 lags = 50 predictors, so $$X$$ has 50 columns. The first five columns describe the immediately preceding trial (`lag 1`), the next five describe the trial before that (`lag 2`), and so on. To fit the multinomial regression model by maximum likelihood we use the built-in `mnrfit` function. Recent MATLAB releases also provide a more sophisticated `fitmnr` function, but I chose `mnrfit` because constructing the dummy\-coded design matrix $$X$$ makes the predictor encoding more transparent.
 
 ```matlab
 % Fit the multinomial logistic regression
@@ -299,7 +297,7 @@ Compared to the running averages we plotted before, the fitted probabilities rep
 
 # A Misguided Attempt to Interpret the Fitted Model
 
-Following the example of Lau and Glimcher, you might want to simply plot some of the fitted coefficients to see how past predictors affect choices (Figure 6 of that original publication). An obvious strategy could be to look at the separate impacts of being rewarded on a lever and of selecting a lever without necessarily being rewarded on the log-odds of that same lever, as measurements of the effects of reinforcement and choice persistence on behaviour respectively. In the case of lever 1, the coefficients for the predictor `lever 1 chosen` are found at rows 2, 7, 12, etc. of $$B$$ and the coefficients for the predictor `lever 1 rewarded` at rows 4, 9, 14, etc. For lever 2, we are interested in the coefficients of `lever 2 chosen` (rows 3, 8, 13, ...) and `lever 2 rewarded` (rows 5, 10, 15, ...).
+Following the example of **Lau and Glimcher (2005)**, you might want to simply plot some of the fitted coefficients to see how past predictors affect choices (Figure 6 of that original publication). An obvious strategy could be to look at the separate impacts of being rewarded on a lever and of selecting a lever without necessarily being rewarded on the log-odds of that same lever, as measurements of the effects of reinforcement and choice persistence on behaviour respectively. In the case of lever 1, the coefficients for the predictor `lever 1 chosen` are found at rows 2, 7, 12, etc. of $$B$$ and the coefficients for the predictor `lever 1 rewarded` at rows 4, 9, 14, etc. For lever 2, we are interested in the coefficients of `lever 2 chosen` (rows 3, 8, 13, ...) and `lever 2 rewarded` (rows 5, 10, 15, ...).
 
 ```matlab
 figure()
@@ -343,7 +341,7 @@ axis square
 
 ![Fitted coefficients](/images/multinomial_regression/figure_2.png)
 
-While the other coefficients have little obvious trend, the coefficients associated with rewarded choices on lever 1 are positive and tend to decrease as we look further into the past, suggesting a positive and decreasing impact of past rewards on selecting lever 1. However, contrary to the original study of Lau and Glimcher, which relied on a simple logistic regression with just two possible outcomes, interpretation of this observation is more delicate. Each coefficient $$\beta_{k,j}$$ tells us how predictor $$j$$ affects the log-odds of lever $$k$$ versus lever 3, rather than how the choice probability $$\pi_k$$, the quantity we are really interested in, behaves. This might explain why the other coefficients seem noisy at first glance. To know how the predictors affect choice probabilities, we must take into account the other alternatives, a topic for another time.
+While the other coefficients have little obvious trend, the coefficients associated with rewarded choices on lever 1 are positive and tend to decrease as we look further into the past, suggesting a positive and decreasing impact of past rewards on selecting lever 1. However, contrary to the original study of **Lau and Glimcher (2005)**, which relied on a simple logistic regression with just two possible outcomes, interpretation of this observation is more delicate. Each coefficient $$\beta_{k,j}$$ tells us how predictor $$j$$ affects the log-odds of lever $$k$$ versus lever 3, rather than how the choice probability $$\pi_k$$, the quantity we are really interested in, behaves. This might explain why the other coefficients seem noisy at first glance. To know how the predictors affect choice probabilities, we must take into account the other alternatives, a topic for another time.
 
 ---
 # References
