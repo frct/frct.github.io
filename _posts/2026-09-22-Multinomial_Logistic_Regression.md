@@ -299,7 +299,7 @@ Compared to the running averages we plotted before, the fitted probabilities rep
 
 # A Misguided Attempt to Interpret the Fitted Model
 
-Following the example of Lau and Glimcher, you might want to simply plot some of the fitted coefficients to see how past predictors affect choices (Figure 6 of that original publication). An obvious strategy could be to look at the separate impacts of being rewarded on a lever and of selecting a lever without necessarily being rewarded on the log-odds of that same lever, as measurements of the effects of reinforcement and choice persistence on behaviour respectively. In the case of lever 1, the coefficients for the predictor `lever 1 chosen` are found at rows 2, 7, 12, etc. of $B$ and the coefficients for the predictor `lever 1 rewarded` at rows 4, 9, 14, etc. For lever 2, we are interested in the coefficients of `lever 2 chosen` (rows 3, 8, 13, ...) and `lever 2 rewarded` (rows 5, 10, 15, ...).
+Following the example of Lau and Glimcher, you might want to simply plot some of the fitted coefficients to see how past predictors affect choices (Figure 6 of that original publication). An obvious strategy could be to look at the separate impacts of being rewarded on a lever and of selecting a lever without necessarily being rewarded on the log-odds of that same lever, as measurements of the effects of reinforcement and choice persistence on behaviour respectively. In the case of lever 1, the coefficients for the predictor `lever 1 chosen` are found at rows 2, 7, 12, etc. of $$B$$ and the coefficients for the predictor `lever 1 rewarded` at rows 4, 9, 14, etc. For lever 2, we are interested in the coefficients of `lever 2 chosen` (rows 3, 8, 13, ...) and `lever 2 rewarded` (rows 5, 10, 15, ...).
 
 ```matlab
 figure()
