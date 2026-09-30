@@ -8,7 +8,7 @@ tags:
   - Statistics
 ---
 
-(Version française plus bas)
+(Version française à venir)
 
 This post introduces multinomial logistic regression through a hands-on MATLAB Live Script. The tutorial shows how to model behavioural choices as a function of choices and rewards received on previous trials, using explicit dummy coding to construct the regression design matrix.
 
@@ -20,11 +20,11 @@ In statistical analysis, **regression** models are a way of estimating the relat
 
  $$ y_i =\beta_0 +\beta_1 x_i +\varepsilon_i $$ 
 
-where $\varepsilon_i$ is a random error term with zero mean. With this assumption,  **the linear regression model describes the expected value of Y conditioned on each observation** $x_{i\;} \;$ as a simple trend line with an intercept $\beta_0$ and a slope $\beta_1$:
+where $\varepsilon_i$ is a random error term with zero mean. With this assumption,  **the linear regression model describes the expected value of Y conditioned on each observation $x_{i}$** as a simple trend line with an intercept $\beta_0$ and a slope $\beta_1$:
 
  $$ \mathrm{E}\left\lbrack Y|x_i \right\rbrack =\beta_0 +\beta_1 x_i $$ 
 
- The central question, which applies to any regression model, is to find the parameter values that fit the data best according to some criterion: for linear regression the sum of squared errors between observations $y_i$ and expected values $E\left(Y|x_i \right)$ is minimised. A first extension is to admit multiple predictors $x_1 ,\ldots,x_p$, collected in the vector $\mathbf{x}={\left(x_1 ,\ldots,x_p \right)}^T$, in which case the model becomes:
+The central question, which applies to any regression model, is to find the parameter values that fit the data best according to some criterion: for linear regression the sum of squared errors between observations $y_i$ and expected values $E\left(Y|x_i \right)$ is minimised. A first extension is to admit multiple predictors $x_1 ,\ldots,x_p$, collected in the vector $\mathbf{x}={\left(x_1 ,\ldots,x_p \right)}^T$, in which case the model becomes:
 
  $$ \mathrm{E}\left\lbrack Y|\mathbf{x}\right\rbrack =\beta_0 +\beta_1 x_1 +\beta_2 x_2 +\ldotp \ldotp \ldotp +\beta_p x_p =\beta_0 +\sum_{j=1}^p \beta_j x_j $$ 
 
@@ -47,15 +47,15 @@ Solving for $\pi_3$ and substituting back, the estimated probability of each act
 
  $$ \left\lbrace \begin{array}{c} \pi_1 =\frac{e^{\eta_1 } }{1+e^{\eta_1 } +e^{\eta_2 } }\newline \pi_2 =\frac{e^{\eta_2 } }{1+e^{\eta_1 } +e^{\eta_2 } }\newline \pi_3 =\frac{1}{1+e^{\eta_1 } +e^{\eta_2 } } \end{array}\right. $$ 
 
-It's worth noticing here how complex these probabilities are, as they depend on both $\eta \;$ predictors; simply increasing $\eta_1$, despite increasing the log\-odds of choosing lever 1 relatice to lever 3, does not guarantee an overall increase in $\pi_1$.
+It's worth noticing here how complex these probabilities are, as they depend on both $\eta$ predictors; simply increasing $\eta_1$, despite increasing the log\-odds of choosing lever 1 relative to lever 3, does not guarantee an overall increase in $\pi_1$.
 
 # Dummy Coding
 
-I've explained how to deal with nominal dependent variables, now comes the turn of nominal independent variables. Here we can't use the previous trick of replacing variables with log\-odds since the observations $\mathbf{x}$ which are indeed random samples of X are nonetheless fixed once observed. **Dummy coding** solves this problem by replacing the nominal predictors with $K-1$ variables, where $K$ is the total number of categories. Each dummy variable equals 1 if the data point belongs to a given category and 0 otherwise. The omitted category is the reference (or default), identified by all dummy variables being 0. Other coding schemes exist, for instance effect coding with values 1, 0 and \-1, but they change the interpretation of the coefficients and I will not use them. As an example, if we want to predict height based on sex, we introduce a dummy variable $d$ equal to 1 if the subject is female and 0 if male; the model is:
+I've explained how to deal with nominal dependent variables, now comes the turn of nominal independent variables. Here we can't use the previous trick of replacing variables with log\-odds since the observations $\mathbf{x}$ which are indeed samples of random variable X are nonetheless fixed once observed. **Dummy coding** solves this problem by replacing the nominal predictors with $K-1$ variables, where $K$ is the total number of categories. Each dummy variable equals 1 if the data point belongs to a given category and 0 otherwise. The omitted category is the reference (or default), identified by all dummy variables being 0. Other coding schemes exist, for instance effect coding with values 1, 0 and \-1, but they change the interpretation of the coefficients and I will not use them. As an example, if we want to predict height based on sex, we introduce a dummy variable $d$ equal to 1 if the subject is female and 0 if male; the model is:
 
  $$ y_i =\beta_0 +\beta_1 d_i +\varepsilon_{i\;} $$ 
 
-The meaning of $\beta_0$ and $\beta_1$ follows directly from the conditional expectation of $Y$. For a male, ${E\left(Y|d=0\right)=\;\beta }_0$ is the expected height of a male (estimated by the sample mean height of the males); for a female, $E\left\lbrack Y|d=1\right\rbrack =\beta_0 +\beta_1$ which means that $\beta_1$ is the difference in expected height between females and males. With three categories we would use two dummy variables, and each coefficient would be the difference in expected outcome between that category and the reference category.
+The meaning of $\beta_0$ and $\beta_1$ follows directly from the conditional expectation of $Y$. For a male, $E\left(Y|d=0\right)=\beta_0$ is the expected height of a male (estimated by the sample mean height of the males); for a female, $E\left(Y|d=1\right) =\beta_0 +\beta_1$ which means that $\beta_1$ is the difference in expected height between females and males. With three categories we would use two dummy variables, and each coefficient would be the difference in expected outcome between that category and the reference category.
 
 # A Small Simulated Dataset
 
@@ -124,11 +124,11 @@ legend('Lever 1', 'Lever 2', 'Lever 3', 'Location', 'best');
 
 # Constructing the Design Matrix
 
-We now ask whether previous choices and rewards can predict the choice on the current trial. Let $c_t \in \lbrace 1,2,3\rbrace$ be the lever chosen and $r_t \in \lbrace 0,1\rbrace$ the reward obtained on trial $t$. At this point, the design of the regression is really up to you. In my case, I wanted to use the past $L=10$ trials (the horizon) to predict $c_t$, with five predictors for each lag $\ell =1,\ldots,L$: indicators for having chosen lever 1, having chosen lever 2, having been rewarded on lever 1, having been rewarded on lever 2, and having been rewarded on lever 3, so that there are $p=5L=50$ predictors in total, and the model to be fitted is the system of equations introduced above, with ${\mathbf{x}}_t ={\left(x_{t,1} ,\ldots,x_{t,p} \right)}^T$ as predictors:
+We now ask whether previous choices and rewards can predict the choice on the current trial. Let $c_t \in \lbrace 1,2,3\rbrace$ be the lever chosen and $r_t \in \lbrace 0,1\rbrace$ the reward obtained on trial $t$. At this point, the design of the regression is really up to you. In my case, I wanted to use the past $L=10$ trials (the horizon) to predict $c_t$, with five predictors for each lag $\ell =1,\ldots,L$: indicators for having chosen lever 1, having chosen lever 2, having been rewarded on lever 1, having been rewarded on lever 2, and having been rewarded on lever 3, so that there are $p=5L=50$ predictors in total, and the model to be fitted is the system of equations introduced above, with $\mathbf{x_t}={\left(x_{t,1} ,\ldots,x_{t,p} \right)}^T$ as predictors:
 
  $$ \log \frac{P\left.\left(c_t =k\right|{\mathbf{x}}_t \right)}{P\left.\left(c_t =3\right|{\mathbf{x}}_t \right)}=\beta_{k,0} +\sum_{j=1}^p \beta_{k,j} x_{t,j} ,~~k=1,2 $$ 
 
-A few things to note about this design. There is no predictor for having chosen lever 3, which means lever 3 is the reference lever, as above. The last three predictors are choice\-reward combinations, 'rewarded on lever $k$ ' meaning that lever $k$ was chosen and rewarded: predictor 3 is the effect of being rewarded on lever 1 in addition to the effect of selecting lever 1, which is predictor 1. Alternative designs might want to separate these effects differently, and this choice matters when trying to interpret the final results. The **design matrix** $X$ is the collection of the predictors for every trial; it has one row per observation (trial) and one column per predictor. The trial\-by\-trial choices $c_t$ are similarly collected in the response vector $y$.
+A few things to note about this design. There is no predictor for having chosen lever 3, which means lever 3 is the reference lever, as above. The last three predictors are choice-reward combinations, `rewarded on lever k` meaning that lever $k$ was chosen and rewarded: predictor 3 is the effect of being rewarded on lever 1 in addition to the effect of selecting lever 1, which is predictor 1. Alternative designs might want to separate these effects differently, and this choice matters when trying to interpret the final results. The **design matrix** $X$ is the collection of the predictors for every trial; it has one row per observation (trial) and one column per predictor. The trial-by-trial choices $c_t$ are similarly collected in the response vector $y$.
 
 ```matlab
 horizon = 10;
@@ -279,7 +279,7 @@ We have now built our design matrix $X$, which contains the agent's behavioural 
 
 ```
 
-The output $B$ contains the fitted coefficients ${\overset{\textrm{̂}}{\beta} }_{k,j}$ of the model. It has two columns, the first for the log\-odds of choosing lever 1 rather than lever 3 ( $k=1$ ), and the second for the log\-odds of lever 2 over lever 3 ( $k=2$ ). It contains 51 rows: the first row is for the intercepts ${\overset{\textrm{̂}}{\beta} }_{1,0}$ and ${\overset{\textrm{̂}}{\beta} }_{2,0}$, and the remaining 50 for the predictor coefficients, so that $\textrm{B}\left(j+1,k\right)={\overset{\textrm{̂}}{\beta} }_{k,j}$. To check the model is working, you can calculate and plot the predicted probabilities of each action using the mnrval function, the fitted $B$, and the original data $X$ (instead of recycling $X$, the recommended method is usually to hold out some of the data from the fitting and to use that as a test dataset).
+The output $B$ contains the fitted coefficients $\beta_{k,j}$ of the model. It has two columns, the first for the log-odds of choosing lever 1 rather than lever 3 ( $k=1$ ), and the second for the log-odds of lever 2 over lever 3 ( $k=2$ ). It contains 51 rows: the first row is for the intercepts $\beta_{1,0}$ and $\beta_{2,0}$, and the remaining 50 for the predictor coefficients, so that $B\left(j+1,k\right)=\beta_{k,j}$. To check the model is working, you can calculate and plot the predicted probabilities of each action using the `mnrval` function, the fitted $B$, and the original data $X$ (instead of recycling $X$, the recommended method is usually to hold out some of the data from the fitting and to use that as a test dataset).
 
 ```matlab
 % Evaluate fitted choice probabilities on the observed predictors
