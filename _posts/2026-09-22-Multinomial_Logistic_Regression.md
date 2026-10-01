@@ -345,7 +345,7 @@ While the other coefficients have little obvious trend, the coefficients associa
 
 Cet article présente la régression logistique multinomiale à l'aide d'un Live Script MATLAB. Le tutoriel montre comment modéliser des choix comportementaux en fonction des choix et des récompenses obtenues lors des essais précédents, en utilisant un codage indicateur explicite pour construire la matrice de conception de la régression.
 
-[📓 Télécharger le Live Script MATLAB](/files/MultiLogReg_fr.mlx)
+[📓 Télécharger le tutoriel MATLAB](/files/MultiLogReg_fr.mlx)
 
 # Qu'est-ce qu'une régression logistique multinomiale ?
 
