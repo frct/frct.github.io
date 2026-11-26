@@ -1,8 +1,8 @@
 ---
 title: "Sign-Tracking and Goal-Tracking as an Interplay Between Model-Based and Model-Free Decision-Making"
 collection: talks
-type: "Workshop"
-permalink: /talks/2026-11-21-STGT_model
+type: "Talk"
+permalink: /talks/2026-11-21-STGT-model
 venue: "Sign- and Goal-Tracking: Human data, computational models, and rodent foundations"
 date: 2026-11-21
 location: "Potsdam, Germany"
